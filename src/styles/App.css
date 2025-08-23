@@ -63,7 +63,7 @@ body,
   background: #ffe600;
 }
 
-/* gpt animated code */
+
 /* --- Fade + Slide Animation --- */
 @keyframes fadeSlideIn {
   0% {
@@ -100,11 +100,25 @@ body,
 /* finish */
 
 
-/* gpt css */
-section {
+
+/* section {
   padding: 5rem 1rem;
   text-align: center;
+} */
+
+
+
+section {
+  width: 100%;
+  min-height: 100vh; /* Full screen height */
+  padding: 4rem 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
+
 
 .features, .reviews, .pricing{
   /* background: white; */
@@ -156,7 +170,7 @@ section {
 
 /* finish */
 
-/* gpt animated features section */
+
 /* --- Feature Section Styling --- */
 section {
   padding: 5rem 1rem;
@@ -201,8 +215,8 @@ section {
 }
 
 /* Individual Card */
-.feature-card {
-  background: #ffffff;
+.feature-card, .review-card, .price-card {
+  background: #c7c7c7;
   padding: 1.5rem;
   border-radius: 10px;
   width: clamp(250px, 90%, 320px);

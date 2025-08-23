@@ -1,44 +1,36 @@
 import React from 'react';
 import './styles/App.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+
 
 function App() {
+
+
+  useEffect(() => {
+  AOS.init({
+    duration: 1000,
+    once: true, // Animate only once
+  });
+}, []);
+
+
+
   return (
     <div className="app">
       {/* Top Section */}
-      <header className="top-section">
+      <header className="top-section" data-aos="fade-up">
         <h1 className="fade-slide-in">TaskFlow</h1>
         <p className="fade-slide-in">Organize your tasks. Simplify your life.</p>
         <button className="fade-slide-in">Get Started</button>
       </header>
 
-      {/* Features Section */}
-      {/* <section className="features">
-        <h2>Features</h2>
-        <div className="feature-cards">
-          <div className="feature-card">
-            <i className="fa fa-check-circle"></i>
-            <h3>Smart Task Management</h3>
-            <p>Create, organize, and prioritize your tasks efficiently.</p>
-          </div>
-          <div className="feature-card">
-            <i className="fa fa-bell"></i>
-            <h3>Reminders & Alerts</h3>
-            <p>Never miss a deadline with our smart reminders.</p>
-          </div>
-          <div className="feature-card">
-            <i className="fa fa-sync"></i>
-            <h3>Sync Across Devices</h3>
-            <p>Access your tasks from anywhere, on any device.</p>
-          </div>
-        </div>
-      </section> */}
-
-
-
-      {/* gpt feature section */}
+      
+      
       {/* Features Section */}
 {/* Features Section */}
-<section className="features">
+<section className="features" data-aos="fade-right">
   <h2 className="fade-up feature-heading">Features</h2>
   <div className="feature-cards">
     <div className="feature-card fade-up card1">
@@ -61,7 +53,7 @@ function App() {
 
 
       {/* Reviews Section */}
-      <section className="reviews">
+      <section className="reviews" data-aos="zoom-in">
         <h2>What Users Say</h2>
         <div className="review-cards">
           <div className="review-card">
@@ -80,7 +72,7 @@ function App() {
       </section>
 
       {/* Pricing Section */}
-      <section className="pricing">
+      <section className="pricing" data-aos="fade-left">
         <h2>Choose Your Plan</h2>
         <div className="pricing-cards">
           <div className="price-card">
@@ -114,7 +106,7 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="footer">
+      <footer className="footer" data-aos="fade-up">
         <p>Contact us: support@taskflow.app</p>
         <div className="social-icons">
           <a href="#"><i class="ri-instagram-fill"></i></a>
